@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
 
   def index
-    @reservations
+
   end
   def create
 
@@ -13,6 +13,7 @@ class ReservationsController < ApplicationController
 
   end
   def show
+    @reservation = Reservation.find(params[:id])
 
   end
   def update

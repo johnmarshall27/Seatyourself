@@ -1,8 +1,10 @@
-<h2><%= @restaurant.name %></h2>
-<body><%= @restaurant.description %><%= @restaurant.capacity %></body>
-
-
-<%= form_for([@restaurant, @reservation]) do |f| %>
+<table style="width:100%;border:0;" border="0">
+<tr>
+<td colspan="2" style="background-color:DeepSkyBlue;"><%= @restaurant.name %></td>
+</tr>
+<tr>
+<td style="background-color:lightsalmon;width:30%;text-align:top;"><h2>Restaurant Information</h2><br /><%= @restaurant.description %><br /><%= @restaurant.capacity %><br /></td>
+<td style="background-color:#eeeeee;height:200px;width:70%;text-align:top;"><%= form_for([@restaurant, @reservation]) do |f| %>
   <div class="field">
     <%= f.label :Time_of_Reservation %><br />
     <%= f.date_select :time %>
@@ -14,7 +16,9 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
-
-
-
+<% end %></td>
+</tr>
+<tr>
+<td colspan="2" style="background-color:DeepSkyBlue;">John's Seatyourself service</td>
+</tr>
+</table>
